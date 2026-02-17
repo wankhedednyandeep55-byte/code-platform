@@ -1,0 +1,23 @@
+async function saveToNeon() {
+    const codeContent = document.getElementById('code-editor').value;
+    const apiUrl = "https://ep-dawn-math-ait8002e.apirest.c-4.us-east-1.aws.neon.tech/neondb/rest/v1";
+
+    try {
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer YOUR_NEON_API_KEY' // Dashboard se apni key yahan dalein
+            },
+            body: JSON.stringify({
+                query: "INSERT INTO gallery (image_title, image_url) VALUES ('My Project', '" + codeContent + "')"
+            })
+        });
+
+        if (response.ok) {
+            alert("Success! Data Neon Cloud mein save ho gaya.");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
