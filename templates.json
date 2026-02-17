@@ -1,0 +1,12 @@
+{
+    "landing_page": {
+        "html": "<header><h1>Welcome</h1></header><main><p>My AI App</p></main>",
+        "css": "body { font-family: sans-serif; text-align: center; }",
+        "js": "console.log('Landing page loaded');"
+    },
+    "login_form": {
+        "html": "<form><input type='text' placeholder='Username'><button>Login</button></form>",
+        "css": "form { display: flex; flex-direction: column; width: 200px; gap: 10px; }",
+        "js": ""
+    }
+}
