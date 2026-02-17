@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Builder | Pro IDE</title>
+    <style>
+        body { background: #020617; color: white; font-family: sans-serif; text-align: center; padding: 50px; }
+        textarea { width: 80%; height: 120px; border-radius: 12px; padding: 15px; background: #1e293b; color: white; border: 1px solid #334155; font-size: 16px; margin-bottom: 20px; }
+        #generateBtn { background: linear-gradient(45deg, #10b981, #3b82f6); color: white; padding: 15px 40px; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; font-size: 18px; box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+        #status { margin-top: 20px; color: #94a3b8; font-style: italic; }
+    </style>
+</head>
+<body>
+    <h1>🤖 Prompt to App</h1>
+    <p>Apna idea likhein aur AI aapka app bana dega</p>
+    
+    <textarea id="promptInput" placeholder="Example: Ek sundar Digital Clock banao with dark theme..."></textarea><br>
+    
+    <button id="generateBtn">Build My App ✨</button>
+    
+    <p id="status"></p>
+
+    <script type="module" src="ai-brain-logic.js"></script>
+</body>
+</html>
