@@ -1,0 +1,45 @@
+body {
+  background: #0f172a;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #1e293b;
+}
+
+a {
+  color: cyan;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  height: 70vh;
+}
+
+textarea {
+  width: 50%;
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+iframe {
+  width: 50%;
+  background: white;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background: cyan;
+  border: none;
+  cursor: pointer;
+}
