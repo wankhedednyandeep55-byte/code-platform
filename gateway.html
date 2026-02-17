@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login | Pro IDE Gateway</title>
+    <style>
+        body { background: #0a0a0a; color: white; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .login-box { text-align: center; padding: 40px; background: #161616; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 320px; }
+        .google-btn { background: white; color: black; padding: 12px; width: 100%; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h1>Welcome</h1>
+        <p>Login to start building your Micro-SaaS</p>
+        <button class="google-btn" id="loginBtn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Logo.svg" width="20" alt="G">
+            Continue with Google
+        </button>
+    </div>
+
+    <script type="module">
+        import { supabase } from './supabase-config.js';
+        document.getElementById('loginBtn').onclick = async () => {
+            const { error } = await supabase.auth.signInWithOAuth({ provider: 'google' });
+            if (error) alert(error.message);
+        };
+    </script>
+</body>
+</html>
