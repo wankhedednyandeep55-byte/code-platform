@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Access | Pro IDE</title>
+    <style>
+        body { background: #020617; color: white; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .auth-card { background: #1e293b; padding: 50px; border-radius: 20px; text-align: center; box-shadow: 0 0 50px rgba(0,0,0,0.5); }
+        .google-login { background: #f8fafc; color: #0f172a; padding: 12px 24px; border-radius: 8px; font-weight: bold; border: none; cursor: pointer; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <div class="auth-card">
+        <h1>Join the IDE</h1>
+        <p>Login to save your Micro-SaaS projects</p>
+        <button class="google-login" id="loginBtn">Continue with Google</button>
+    </div>
+
+    <script type="module">
+        import { supabase } from './cloud-link.js';
+        document.getElementById('loginBtn').onclick = async () => {
+            const { error } = await supabase.auth.signInWithOAuth({ provider: 'google' });
+            if (error) alert(error.message);
+        };
+    </script>
+</body>
+</html>
