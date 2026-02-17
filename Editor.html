@@ -1,0 +1,27 @@
+// Supabase Connect karne ke liye script
+const SB_URL = "https://appwsjmmmaifgvjspdzs.supabase.co";
+const SB_KEY = "EYJHBGCIOIJIUzI1NiIsInR5CCI6IkpXVCJ9..."; // Anon Key yahan dalein
+
+async function saveToSupabase() {
+    const code = document.getElementById('code-editor').value;
+    
+    const response = await fetch(`${SB_URL}/rest/v1/projects`, {
+        method: 'POST',
+        headers: {
+            'apikey': SB_KEY,
+            'Authorization': `Bearer ${SB_KEY}`,
+            'Content-Type': 'application/json',
+            'Prefer': 'return=representation'
+        },
+        body: JSON.stringify({ 
+            title: "My AI App", 
+            html_content: code 
+        })
+    });
+
+    if (response.ok) {
+        alert("Bhai, Supabase mein save ho gaya!");
+    } else {
+        alert("Error aaya, check console.");
+    }
+}
