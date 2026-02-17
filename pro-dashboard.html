@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pro IDE | Dashboard</title>
+    <style>
+        body { background: #0f172a; color: white; font-family: sans-serif; margin: 0; display: flex; }
+        .sidebar { width: 250px; background: #1e293b; height: 100vh; padding: 20px; border-right: 1px solid #334155; }
+        .content { flex: 1; padding: 40px; }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
+        .card { background: #1e293b; border: 1px solid #334155; padding: 20px; border-radius: 12px; }
+        .btn-new { background: #10b981; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; width: 100%; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>🚀 Pro IDE</h2>
+        <button class="btn-new" onclick="location.href='app-core.html'">+ Create New App</button>
+        <p style="margin-top:20px; color:#94a3b8;">My Projects</p>
+    </div>
+    <div class="content">
+        <h1>Welcome Back!</h1>
+        <div class="project-grid" id="projectList">
+            <div class="card">
+                <h3>Portfolio App</h3>
+                <p>Status: Live</p>
+                <button onclick="location.href='app-core.html'">Open Editor</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
